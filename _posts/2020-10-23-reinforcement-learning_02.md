@@ -1,5 +1,5 @@
 ---
-title : "Planning by Dynamic Programming"
+title : "MarkovDecisionProcess"
 
 date : 2020-10-23
 
@@ -13,4 +13,4 @@ categories : 강화학습_02
 하지만 policy를 evaluation 하는 것만으로 좋은 policy를 얻을 수 없다.
 더 많은 보상을 얻게 되는 쪽으로 policy를 업데이트 하기위해선
 policy evaluate + policy control 이 필요하다.
-policy control은 MDP가 주어질때 Optimal policy를 찾는 것으로 Bellman Optimal equation을 사용하여 
+policy control은 MDP가 주어질때 Optimal policy를 찾는 것으로 Bellman Optimal equation을 사용하여
