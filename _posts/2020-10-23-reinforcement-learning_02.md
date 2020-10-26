@@ -3,7 +3,7 @@ title : "MarkovDecisionProcess"
 
 date : 2020-10-23
 
-categories : 강화학습_02
+categories : 강화학습
 ---
 
 *Prediction 문제와 Control 문제
