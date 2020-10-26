@@ -35,6 +35,6 @@ MP와 MRP는 다음 상태로 갈 전이확률이 정해져있다. 미리 정해
 
 MDP = (S,A,P,R,γ)
 
-<img src="/home/ubuntu/Desktop/git_test/surabanke.github.io/assets/images/change_transition.png" width = "1500">
+<img src="/surabanke/assets/images/change_transition.png" width = "1500">
 
 전이확률은 위와 같이 표현되며 현재 상태 s에서 에이전트가 액션 a를 하여 다음 상태가 s' 가 될 확률이다.
