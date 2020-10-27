@@ -11,12 +11,12 @@ categories : 강화학습
 #### DQN의 등장
 
 
-<img src = "surabanke/assets/images/DQN_0.png" width = "1000">
+<img src = "/surabanke/assets/images/DQN_0.png" width = "1000">
 
 
 
 
-<img src = "surabanke/assets/images/table.png" width = "1000">
+<img src = "/surabanke/assets/images/table.png" width = "1000">
 
 
 
@@ -31,7 +31,7 @@ GOAL : find parameter W minimising loss between approximate value and true value
 3. 실제 가지고 있지 않은 data도 function에 넣어 구할 수 있다.
 
 
-<img src = "surabanke/assets/images/DQN.png" width = "1000">
+<img src = "/surabanke/assets/images/DQN.png" width = "1000">
 
 
 #### Cube DQN 구현코드
