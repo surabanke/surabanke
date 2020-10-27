@@ -27,7 +27,7 @@ value function approximator(W) 파라미터는 뉴럴넷에서의 weight파라�
 GOAL : find parameter W minimising loss between approximate value and true value
 실제값의 근사값을 얻는다면
 1. 메모리 절약
-2. 실제 data의 noise도 배제
+2. 실제 data의 noise도 상관없다.
 3. 실제 가지고 있지 않은 data도 function에 넣어 구할 수 있다.
 
 
