@@ -147,4 +147,4 @@ GLIE 2, 결국 converge to greedy.
 
 SARSA는 GLIE와 Robbins Monro 조건을 따른다.
 
-<img src = "/surabanke/assets/images/Robbins-Monro.png" width = "500">
+<img src = "/surabanke/assets/images/Robbins-Monro.png" width = "200">
