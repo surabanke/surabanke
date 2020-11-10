@@ -1,5 +1,5 @@
 ---
-title : "Model free Learning"
+title : "Model free Learning_1"
 
 date : 2020-11-04
 
@@ -14,7 +14,7 @@ model free상태에서 value function값을 구하는 알고리즘으로는 mont
 
 
 
-#### Montecarlo Prediction
+#### Monte Carlo Prediction
 
 *V(s) = total_return / N(s)*
 
