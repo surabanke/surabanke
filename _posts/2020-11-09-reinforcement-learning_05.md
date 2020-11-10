@@ -23,7 +23,7 @@ Importance sampling은 통계학에서 알고자 하는 분포와 다른 분포�
 
 원하는 확률분포에서 샘플링이 가능하지 않을 때 다른 분포를 통해 이를 추정한다.
 
-<img src = "/surabanke/assets/images/ImportanceSampling.png" width = "400">
+<img src = "/surabanke/assets/images/ImportanceSampling.png" width = "300">
 
 위는 확률분포 P를 따른 확률변수함수 f(x)의 기댓값을 다른 확률분포인 Q를 이용하여 나타낸 식이다.
 (P/Q는  importance weight이라고 한다.)
