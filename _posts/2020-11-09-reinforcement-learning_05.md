@@ -1,7 +1,7 @@
 ---
 title : "Model free Learning_2"
 
-date : 2020-11-04
+date : 2020-11-10
 
 categories : 강화학습
 ---
@@ -23,7 +23,7 @@ Importance sampling은 통계학에서 알고자 하는 분포와 다른 분포�
 
 원하는 확률분포에서 샘플링이 가능하지 않을 때 다른 분포를 통해 이를 추정한다.
 
-<img src = "/surabanke/assets/images/ImportanceSampling.png" width = "500">
+<img src = "/surabanke/assets/images/ImportanceSampling.png" width = "400">
 
 위는 확률분포 P를 따른 확률변수함수 f(x)의 기댓값을 다른 확률분포인 Q를 이용하여 나타낸 식이다.
 (P/Q는  importance weight이라고 한다.)
@@ -54,6 +54,6 @@ Q Learning은 importance sampling을 사용하지 않아도 된다.
 현재 state에서 behaviour policy를  ε-greedy로 따라 action을 선택하고 q-function을 이용하여 update 하고 이때 TD target 다음 state s'에서 a'는  target polilcy π 를 greedy로하여 action을 선택한다.
 이렇게 하면 직접 경험 한 것이 아니라 다른곳에서의 경험을 가져다 사용할 수 있다.
 
-Q Learning은 On policy SARSA 알고리즘(벨만 기대방정식)과 다르게 벨만 최적방정식을 사용한다.
+Q Learning은 On policy SARSA 알고리즘(벨만 기대방정10)과 다르게 벨만 최적방정식을 사용한다.
 
 <img src = "/surabanke/assets/images/Q-learning.png" width = "400">
