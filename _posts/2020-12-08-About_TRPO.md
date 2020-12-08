@@ -7,7 +7,7 @@ categories : 강화학습
 ---
 
 
-## Trust Region Policy Optimization
+## Trust Region Policy Optimization 
 
 TRPO 어렵다
 
