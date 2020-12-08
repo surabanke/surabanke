@@ -7,7 +7,7 @@ categories : 강화학습
 ---
 
 
-## Trust Region Policy Optimization 
+## Trust Region Policy Optimization
 
 TRPO 어렵다
 
@@ -39,6 +39,7 @@ Introduction에서는 이 알고리즘의 surrogate objective function을 minimi
 
 
 이 식은 policy를 직접 update하는것으로 학습을 진행 할 때 expected  discounted reward를 구하는 것이다. 여기서 에타는 policy π의 성능지표로 objective function으로 생각해도 될거같다.
+
 
 그리고 kakade & Langford는 old policy에서 new policy로 업데이트 할때
 
