@@ -3,7 +3,7 @@ title : "Dynamic Programming"
 
 date : 2020-10-27
 
-categories : RL
+categories : rl
 ---
 
 ## Model Based Planning, Dynamic Programming

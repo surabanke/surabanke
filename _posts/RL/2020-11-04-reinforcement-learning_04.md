@@ -3,7 +3,7 @@ title : "Model free Learning_1"
 
 date : 2020-11-04
 
-categories : RL
+categories : rl
 ---
 ## MDP를 모를때 Model free Prediction
 

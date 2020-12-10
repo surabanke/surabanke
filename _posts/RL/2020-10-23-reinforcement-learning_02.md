@@ -3,7 +3,7 @@ title : "Bellman equation"
 
 date : 2020-10-27
 
-categories : RL
+categories : rl
 ---
 
 ## Bellman equation
