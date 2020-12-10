@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "RL paper"
-    url: https://surabanke.github.io/surabanke/rl_paper/
+    url: /rl_paper/
   #- title: "Paper review"
    # url: https://surabanke.github.io/surabanke/rl_paper/
   # - title: "Sample Posts"
