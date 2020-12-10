@@ -3,7 +3,7 @@ title : "Bellman equation"
 
 date : 2020-10-27
 
-categories : 강화학습
+categories : RL
 ---
 
 ## Bellman equation

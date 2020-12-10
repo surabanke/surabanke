@@ -3,7 +3,7 @@ title : "MarkovDecisionProcess"
 
 date : 2020-10-26
 
-categories : 강화학습
+categories : RL
 ---
 
 -팡요랩과 실버강의 바배강 책을 참고하여 쓴 필기를 정리함

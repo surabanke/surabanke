@@ -3,7 +3,7 @@ title : "Model free Learning_2"
 
 date : 2020-11-10
 
-categories : 강화학습
+categories : RL
 ---
 
 ## Model free control Off-policy편

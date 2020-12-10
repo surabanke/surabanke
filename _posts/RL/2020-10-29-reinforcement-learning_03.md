@@ -3,7 +3,7 @@ title : "Dynamic Programming"
 
 date : 2020-10-27
 
-categories : 강화학습
+categories : RL
 ---
 
 ## Model Based Planning, Dynamic Programming
