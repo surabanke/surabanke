@@ -1,7 +1,7 @@
 ---
 title : "optimizers"
 
-date : 2020-12-08
+date : 2020-12-18
 
 categories : DL
 ---
@@ -10,7 +10,7 @@ categories : DL
 
 ###SGD (Stochastic Gradient Descent)
 
-<img src = "/surabanke/assets/images/SGD.png" width = "400">
+<img src = "/surabanke/assets/images/SGD.png" width = "200">
 
 L은 Loss 로 gradient는 Loss를 Weight로 편미분한 것이다. 여기서 에타는 learning rate
 
