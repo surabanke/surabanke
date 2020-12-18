@@ -74,11 +74,11 @@ Momentum + RMSProp 으로 부드러운 움직임과 매개변수 갱신도조정
 이는 학습 초반에 v0와 h0가 0으로 가는 문제를 보완하기 위해 추가한것이다.
 수식의 1,2번과정을 보자 v0와 h0값이 0이라면  γ_v와 γ_h 는 1이 되면서 학습 초기에 γ_v와 γ_h의 기여도가 없어지는 문제가 생긴다.
 
-<img src = "/surabanke/assets/images/adam_bias_correction.png" width = "400">
+<img src = "/surabanke/assets/images/adam_bias_correction.png" width = "200">
 
 v0와 h0가 0이라고 가정하고 현재시간 t부터 이전시간들의 기울기를 전부 더하면
 
-<img src = "/surabanke/assets/images/Adam_1.png" width = "400">
+<img src = "/surabanke/assets/images/Adam_1.png" width = "200">
 
  논문 (1)식에서 보듯이 표현할 수 있다. 여기서 β는  γ인듯 하다.
 
@@ -99,7 +99,7 @@ Nadam은 momentum  대신 NAG를 사용한 adam optimizer임
 
 Adam은 convergence analysis 단계가 있다. 가장 잘 구해진 J(θ) loss 함수와 비교하는 regret 을 구한다.
 
-<img src = "/surabanke/assets/images/Adam_converge_analysis.png" width = "400">
+<img src = "/surabanke/assets/images/Adam_converge_analysis.png" width = "200">
 
 여기서 f(θ*)이 best loss다.
 
