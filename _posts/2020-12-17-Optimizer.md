@@ -81,7 +81,9 @@ Momentum + RMSProp 으로 부드러운 움직임과 매개변수 갱신도조정
 v0와 h0가 0이라고 가정하고 현재시간 t부터 이전시간들의 기울기를 전부 더하면
 
 
-<img src = "/surabanke/assets/images/Adam_1.PNG" width = "500">
+
+<img src = "/surabanke/assets/images/Adam_1.PNG" width = "600">
+
 
 
  논문 (1)식에서 보듯이 표현할 수 있다. 여기서 β는  γ인듯 하다.
