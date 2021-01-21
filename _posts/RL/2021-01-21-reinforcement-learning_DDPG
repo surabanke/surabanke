@@ -2,7 +2,7 @@
 ---
 title : "DDPG"
 
-date : 2020-01-19
+date : 2020-01-21
 
 categories : rl
 ---
@@ -43,22 +43,24 @@ SPG에서 policy의 variance가 0에 수렴하면 DPG와 같아지므로 DPG는 
 먼저 total discounted reward, G0 의 expectation형태에서 식이 시작된다.
 G0의 expectation은 state s0로 할 수 있는 모든 state를 바꿔가면서 total expected return을 구한다.
 
-<img src="/surabanke/assets/images/ddpg_objectivefunction1.PNG" width = "400">
+<img src="/surabanke/assets/images/ddpg_objectivefunction1.PNG" width = "300">
 
 여기서 v(s0)는 state가 s0로 고정되어있을때의 total return이다.
 <img src="/surabanke/assets/images/ddpg_objectivefunction2.PNG" width = "400">
 
+<img src="/surabanke/assets/images/ddpg_objectivefunction3.PNG" width = "450">
+
 이 식은 v(s0)에서 action a0를 따로 빼낸것이다. 노란색으로 표시된 부분을 따로 보면 Q(s0,a0)가 된다.
-<img src="/surabanke/assets/images/ddpg_objectivefunction3.PNG" width = "400">
 
-
-<img src="/surabanke/assets/images/ddpg_objectivefunction5.PNG" width = "400">
+<img src="/surabanke/assets/images/ddpg_objectivefunction5.PNG" width = "450">
 
 여기서 policy인 P(a0|s0)는 deterministic policy이므로 그냥 action aθ0부분만 곱해지기 때문에 Q(s0,aθ0)가 된다.
 action은 deep network를 거쳐 나온 결과이기 때문에 parameterized action이고 올바른 action을 만드는 weight를 업데이트 시키기 위한 gradient방식을 deep deterministic policy gradient라고 한다.
 
-<img src="/surabanke/assets/images/ddpg_objectivefunction5.PNG" width = "400">
-DPG는 state에 대한 action을 하고 그 다음 state로 넘어가서 리워드를 주는 것이아니라 action을 한 후 즉시 보상한다.R(s0,a0)는 즉시 보상. 그 뒤에 더해지는 것은 state 1부터 끝까지의 reward
+<img src="/surabanke/assets/images/ddpg_objectivefunction5.PNG" width = "450">
+
+DPG는 state에 대한 action을 하고 그 다음 state로 넘어가서 리워드를 주는 것이아니라 action을 한 후 즉시 보상한다.
+(R(s0,a0)는 즉시 보상. 그 뒤에 더해지는 것은 state 1부터 끝까지의 reward)
 
 ## Deep Determinisitc Policy Gradient
 
@@ -69,14 +71,15 @@ Q(s0,a0)를 미분해야한다.
 
 #### q function의 미분
 Q를 다시 한번 쓰면 아래와 같다. 여기서 인테그랄 속에 gamma*Q와 P가 곱해져 있는데 이것을 미분하면 A'B + AB'형태가 된다.
-<img src="/surabanke/assets/images/ddpg_objectivefunction7.PNG" width = "400">
+
+<img src="/surabanke/assets/images/ddpg_objectivefunction7.PNG" width = "450">
 
 step 1,2,3으로 미분을 설명한다.
 
 step 1
 θ -> a -> R 로 속해있기 때문에 chain rule을 적용한다.
 
-<img src="/surabanke/assets/images/q_function_step1.PNG" width = "400">
+<img src="/surabanke/assets/images/q_function_step1.PNG" width = "280">
 
 a'θ0는 R0안에 있던 aθ0를 미분한 것이다.
 
@@ -88,11 +91,12 @@ AB'형태를 먼저 나열하자
 step 3
 A'B를 chain rule을 적용하지 않은 상태로 써보면
 
-<img src="/surabanke/assets/images/q_function_step3.PNG" width = "400">
+<img src="/surabanke/assets/images/q_function_step3.PNG" width = "300">
 
 step 1,2,3을 나열하면
 
-<img src="/surabanke/assets/images/q_function_step4.PNG" width = "500">
+<img src="/surabanke/assets/images/q_function_step4.PNG" width = "700">
+
 
 여기서 파란색 a'θ0 은 s1에 있지 않아도 되는 상관없는 action값이므로 앞으로 나온다.
 
@@ -108,14 +112,16 @@ Q0를 미분하기 위해선 Q1의 미분값이 필요하다.
 그리고 Q1을 미분하기 위해선 Q2의 미분값이 필요하다.
 계속 그 다음 step Q function의 미분을 필요로 한다. 아래의 그림과 같이 표현했다.
 
-<img src="/surabanke/assets/images/q_function_step7.PNG" width = "500">
+<img src="/surabanke/assets/images/q_function_step7.PNG" width = "600">
+
+이것을 하나의 식으로 나열해보면..
+
+<img src="/surabanke/assets/images/ddpg.PNG" width = "700">
 
 
-<img src="/surabanke/assets/images/ddpg.PNG" width = "500">
+(아래의 식은 시그마를 써서 표현한것일 뿐 위와 같다.)
 
-
-(시그마를 써서 표현한것이지 위와 같다.)
-<img src="/surabanke/assets/images/ddpg_final.PNG" width = "500">
+<img src="/surabanke/assets/images/ddpg_final.PNG" width = "750">
 
 ## DDPG의 특징
 DDPG는 off policy다.
@@ -130,7 +136,7 @@ DQN에서 사용하던 target network, experience replay 기법을 사용한다�
 
 ## DDPG 알고리즘
 
-<img src="/surabanke/assets/images/ddpg_actor_critic.PNG" width = "500">
+<img src="/surabanke/assets/images/ddpg_actor_critic.PNG" width = "540">
 
 논문에서의 알고리즘을 보면
 
