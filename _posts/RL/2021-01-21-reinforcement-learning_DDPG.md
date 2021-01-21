@@ -139,7 +139,7 @@ DQN에서 사용하던 target network, experience replay 기법을 사용한다�
 
 논문에서의 알고리즘을 보면
 
-<img src="/surabanke/assets/images/ddpg_algorithm.PNG" width = "1000">
+<img src="/surabanke/assets/images/ddpg_algorithm_1.PNG" width = "900">
 
 샘플이 순차적으로 쌓이는 강화학습환경에서 데이터들끼리의 iid하지 않은데 ddpg는 이를 experience replay로 해결한다.
 이것을 uniform random하게 골라서 mini batch로 가져오면 실시간으로
