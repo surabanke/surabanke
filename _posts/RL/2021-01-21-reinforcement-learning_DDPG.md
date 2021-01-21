@@ -120,7 +120,7 @@ Q0를 미분하기 위해선 Q1의 미분값이 필요하다.
 
 (아래의 식은 시그마를 써서 표현한것일 뿐 위와 같다.)
 
-<img src="/surabanke/assets/images/ddpg_final.PNG" width = "750">
+<img src="/surabanke/assets/images/ddpg_final.PNG" width = "800">
 
 ## DDPG의 특징
 DDPG는 off policy다.
@@ -139,7 +139,7 @@ DQN에서 사용하던 target network, experience replay 기법을 사용한다�
 
 논문에서의 알고리즘을 보면
 
-<img src="/surabanke/assets/images/ddpg_algorithm.PNG" width = "700">
+<img src="/surabanke/assets/images/ddpg_algorithm.PNG" width = "900">
 
 샘플이 순차적으로 쌓이는 강화학습환경에서 데이터들끼리의 iid하지 않은데 ddpg는 이를 experience replay로 해결한다.
 이것을 uniform random하게 골라서 mini batch로 가져오면 실시간으로
@@ -147,6 +147,6 @@ DQN에서 사용하던 target network, experience replay 기법을 사용한다�
 
 critic네트워크는 loss를 최소화하는 쪽으로 업데이트 된다. 여기서 loss는 TD error의 MSE(Mean Square Error)를 사용한다.
 
-<img src="/surabanke/assets/images/ddpg_critic_loss.PNG" width = "700">
+<img src="/surabanke/assets/images/ddpg_critic_loss.PNG" width = "350">
 
 위 식은 -E[TD Error]를 표현한 것인데 minimize(-E[TD Error])는 결국 maximize(E[TD error])이고 Q value를 크게 받는 쪽으로 학습을 한다.
