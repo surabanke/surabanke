@@ -101,7 +101,7 @@ step 1,2,3을 나열하면
 
 그러면 a'θ0∙∇aθ0 로 묶어서 아래와 같이 전개 된다.
 
-<img src="/surabanke/assets/images/q_function_step5.PNG" width = "600">
+<img src="/surabanke/assets/images/q_function_step5.PNG" width = "680">
 
 초록색으로 표시한 부분을 보면 Q(s0,a0)이다.
 
