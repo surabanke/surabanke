@@ -1,7 +1,7 @@
 ---
 title : "Bellman equation"
 
-date : 2020-10-27
+date : 2020-10-23
 
 categories : rl
 ---

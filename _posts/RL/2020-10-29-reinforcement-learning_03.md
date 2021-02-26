@@ -1,7 +1,7 @@
 ---
 title : "Dynamic Programming"
 
-date : 2020-10-27
+date : 2020-10-29
 
 categories : rl
 ---
