@@ -20,7 +20,7 @@ title                    : "LOG"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "leh"
-description              : "Grad student studying AI"
+description              : "AI 개발자"
 url                      : "https://surabanke.github.io/surabanke"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "leh"
   avatar           : "/assets/images/whale.jpg"
-  bio              : "grad student studying AI"
+  bio              : "AI 개발자"
   location         : "South Korea"
   email            :
   links:
