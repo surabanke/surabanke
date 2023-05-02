@@ -97,7 +97,7 @@ author:
   avatar           : "/assets/images/whale.jpg"
   bio              : "AI Developer"
   location         : "South Korea"
-  email            : "hel0820jhld@gmail.com"
+  
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
