@@ -25,7 +25,8 @@ categories : log
 
 예를 들면 Atari DQN의 성능은 아주 간단하게 MCTS(Monte-Carlo Tree Search)로 넘어설 수 있다.
 그리고 알파고 또한 MCTS로 성능을 올려 효과를 톡톡히 봤다.
-Model free RL은 모든 unknown world에 적용할 수있다는 일반성이 있지만 이것으로 학습에 도움될 정보를 활용하기 어렵기 때문에 하드코딩 될 수 있었던 특징을 잡기 위해 수많은 샘플데이터를 사용해야한다.(이것은 첫번째 문제와 연관된다.)
+Model free RL은 모든 unknown world에 적용할 수있다는 일반성이 있지만 이것으로 학습에 도움될 정보를 활용하기 어렵기 때문에 하드코딩 될 수 있었던 특징을 잡기 위해 수많은 샘플데이터를 사용해야한다.
+(이것은 첫번째 문제와 연관된다.)
 필자는 로봇 RL을 개발하고있다는데 대부분 의뢰인들은 로봇이라하면 보스턴 다이나믹스와 비교한다고한다.
 그들은 강화학습을 쓰지 않았고 로보틱스 알고리즘을 사용하였다. 왜냐면 휴리스틱이 더 성능이 좋기 때문이다.
 이러한 사례가 많다. 연구로 접근한다면 DeepRL은 분명 어렵지만 멋지고 흥미로운 분야다.
@@ -37,16 +38,18 @@ convex optimization을 DeepRL로 풀고싶지만 simulated annealing부터 적�
 
 shaped reward는 sparse reward와 반대로 최종 목표에 가까운 상태에서 점점 더 많은 보상을 제공한다.
 이는 피드백을 자주 제공해서 더 잘 학습할 수 있지만 그 반대일 수도있다.
-필자는 OpenAI의 boat racing을 예시로 들었다. (너무 티가 나는 예시라 맘에 안들었지만 이만큼 제대로 된 예시가 없어 추가했다는..)
-[sparse reward](https://openai.com/research/faulty-reward-functions)
+필자는 OpenAI의 boat racing을 예시로 들었다.
 
-위 링크는 보트레이싱게임에서 목적지에 도착하는것보다 아이템을 획득하면 주는 보상을 크게 올려 게임이 끝나지 않고 아이템만 먹는 것이다.
+(너무 티가 나는 예시라 맘에 안들었지만 이만큼 제대로 된 예시가 없어 추가했다는..)
+[보트 레이싱게임](https://openai.com/research/faulty-reward-functions)
+
+위 링크는 보트 레이싱게임에서 목적지에 도착하는것보다 아이템을 획득하면 주는 보상을 크게 올려 게임이 끝나지 않고 아이템만 먹는 것이다.
 나도 최단거리로 목적지에 도착하기 위해 에이전트에게 불필요한 움직임을 하면 패널티를 줘야겠다고 생각했다가 패널티가 너무 커서 에이전트가 그 자리에 멈춰버리는 경험을 한적이 있다.
 때론 나의 의도와 다르게 행동할 때가 있고 의도와 맞게 학습하도록 리워드 식을 정의하는게 어려울때가 많다.
 
 ### 좋은 리워드식을 줬다해도 local optimum을 탈출하는건 힘들다.
 explore-exploit의 잘못된 trade-off로 인해 local optimum에 정착할수있다.
-halfcheetah사례가 정말 웃기다.
+half-cheetah사례가 정말 웃기다.
 
 
 <img src = "/surabanke/assets/images/cheetah.png" width = "400">
@@ -75,7 +78,7 @@ DQN은 많은 아타리 게임을 해결할 수 있지만 그것은 학습에 �
 supervised learning이 랜덤확률을 계속 이기지 못한다면 데이터 전처리를 잘못했다거나 학습에서 오류가 있다고 생각하고 과정을 점검할것이다.
 그러나 RL이 그렇다면 버그인지, 하이퍼파라미터가 나빴는지 리워드가 잘못됐는지를 떠나 단순히 운이 나쁜걸수도있다.
 우연히 좋은 학습예제를 발견하는 policy가 그렇지 않은 policy보다 훨씬 빠르게 bootstrap할 것이다. 만약 적절한 예제를 발견하지 못하면 아무것도 배우지 못한채로 episode가 끝나버릴것이다.
-(경험 상 단순 운이 나빠서 학습이 안됐던걸 겪어보지는 않아서 보통 에이전트가 학습을 못한다면 대부분의 경우 환경 구현이나 리워드식 정의하는 부분에서 문제를 찾곤한다. 이 문장은 알고리즘의 성공률이 지도학습보다 작다는 뜻으로 받아들였다. )
+(경험 상 단순 운이 나빠서 학습이 안됐던걸 겪어보지는 않아서 보통 에이전트가 학습을 못한다면 대부분의 경우 환경 구현이나 리워드식 정의하는 부분에서 문제를 찾곤한다. 이 문장은 알고리즘의 성공률이 지도학습보다 작다는 뜻으로 받아들였다.)
 
 또 학습 결과가 좋아도 어느 행동이 리워드를 증가시키는데 기여했는지를 알 수 없다.(credit assignment problem)
 그래서 supervision bitrate이 중요하다.(에이전트가 얼마자 자주 환경으로부터 피드백을 받는지를 나타내는 지표다.)
@@ -86,7 +89,8 @@ supervised learning이 랜덤확률을 계속 이기지 못한다면 데이터 �
 2. 일반적인 메트릭으로 정해져있는 다섯개의 랜덤시드는 충분하지 않을수있다.
 3. 동일한 하이퍼파라미터를, 같은 task에 사용하더라도 동일한 알고리즘을 다르게 구현하면 다른 성능을 보인다.
 
-​### 그럼 실제 사용되는 RL이 있는가?
+
+### 그럼 실제 사용되는 RL이 있는가?
 
 필자가 된다고 인정한것들은 바둑,체스, Dota2와 같은 게임들, 로봇,
 전력센터 사용량 줄이기, Neural Architecture Search를 이용한 AutoML이다.
@@ -107,12 +111,13 @@ RNN으로 구성된 controller에서 샘플네트워크의 구조(A)와 이 구�
 
 <img src = "/surabanke/assets/images/sc2.jpeg" width = "400">
 
-[DeepMind](https://www.deepmind.com/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40)
+[데이터 센터 쿨링시스템](https://www.deepmind.com/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40)
 
 
 ### Deep RL을 사용하는 프로젝트를 시작하기 전 참고하면 좋을것들
 
 1. 리워드는 깔끔하게 정의하기
+
 리워드 식을 정의하는 것은 에이전트가 어떤 행동을 학습하게 될지 결정하는 것이기에 매우 중요하다.
 학습이 잘되고 있는지 learning signal로써의 역할도 잘 하도록 리워드를 정의해야한다.
 잘못하면 원하는 것과 다른 행동을 할 수 있다.
@@ -120,17 +125,20 @@ RNN으로 구성된 controller에서 샘플네트워크의 구조(A)와 이 구�
 
 ​
 2. 데이터를 많이 확보할 수 있으면 좋다.
+
 이는 시뮬레이션 환경에서도 마찬가지이다. online 학습이어도 에이전트가 학습할만큼의 데이터를 실시간으로 확보할 수 있어야한다.
 앞서 말했던것처럼 아타리 게임들도 많은 양의 데이터를 사용해서 학습하였다.
 프로젝트 시작 전 데이터가 존재하는지, 데이터를 생성할 수 있는 시뮬레이션 환경을 확보할 수있는지 고려하는것이 좋다.
 
 ​
 3. 문제를 더 쉬운 문제로 단순화 해보자
+
 에이전트가 최종적으로 해내야하는 일이 A,B,C task면 처음부터 다 학습하는것보다 A 가 해결 가능한지 확인하는것이 좋다.
 더 작은 개념증명을 보여주고 나중에 그것을 일반화한다.
 
 ​
 4. self-play를 도입할수있다면 해보자
+
 위에서 말했듯이 Deepmind의 알파고, 알파제로 Dota2등이 self-play로 좋은 성능을 보였던 예시들이다.
 다만 환경은 경쟁적으로 두 플레이어가 학습해야하며 모두 RL에이전트에 의해 컨트롤되어야한다.
 두 플레이어가 하나의 policy를 가지고 학습하면 둘 다 비슷한 속도로 최적화 될 수 있을것이다.
@@ -143,11 +151,13 @@ model의 현재 state에서 다음 state로 넘어갈 확률과 그 time step에
 
 ​
 6. RL을 fine tuning용으로 사용하기
+
 먼저 supervised learning으로 모델을 만들어놓고 마지막으로 RL을 사용하는 방식이면 학습 시작점이 global에 가깝기 때문에 최적으로 수렴할 확률이 높아질것이다.
 (요새보고있는 DRLSA와 비슷한거같다. 이것은 최적을 구할때 RL로 학습하고 일정 time step(t)이 지난 후 time step t의 state를 휴리스틱 로직의 init solution으로 사용한다.)
 
 ​
 7. 리워드를 꼭 사람이 정해야하는건 아니다.
+
 최적화하려는 도메인의 전문가 데이터만 있다면 이를 역추정하는 inverse RL기법을 사용할수있다.
 원하는 리워드 함수를 정확히 알기가 어려울 때, inverse RL은 에이전트의 행동을 관찰하고 이를 기반으로 에이전트가 최적화할 task를 찾아내 리워드를 역추정한다.
 imitaion learning 또한 전문가의 데이터를 가지고 학습하며 에이전트가 전문가의 행동을 모방하게한다. 이는 직접 scratch부터 학습하는것보다 빠르게 성능을 높인다.
@@ -155,6 +165,7 @@ imitaion learning 또한 전문가의 데이터를 가지고 학습하며 에이
 
 ​
 8. transfer learning을 사용하여 최적화할 task의 학습도 빠르게 진행하게하자.
+
 피터 아빌은 DeepRL이 실제 real-world problem을 풀기 위해 사용되어야한다고 말했다. 그러려면 실세계에 prior정보를 알아야하는데
 이는 메타러닝 기술이 발전되면 최적화하려는 문제의 prior정보를 메타러닝을 통해 대강 배우고 RL을 통해 최적화 하는 방법으로 하면된다는게 필자의 주장이다. 마치 fine tuning과 같다. 메타러닝은 일반화에 집중하고 RL로 최적화한다. 이를 위해서는 메타러닝 기술의 발전이 필요하다.
 
@@ -176,8 +187,11 @@ The trick is that researchers will press on despite this, because they like the 
 
 
 ​_________________________
+
 REF
 
 [original post](https://www.alexirpan.com/2018/02/14/rl-hard.html)
+
 [DeepMind](https://github.com/deepmind/pysc2)
+
 [NeuralArchitectureSearch](https://arxiv.org/abs/1611.01578)
