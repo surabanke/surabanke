@@ -8,7 +8,7 @@ categories : log
 
 ### 조합 최적화
 
-모든 조합을 시도해보지 않고 np-hard의 최적을 근사하는 조합을 추천하는 것을 조합최적화라고 한다.
+조합 최적화(combinatorial optimization)는 유한한 조합 중에서 최적의 것을 찾아내는 문제를 다룬다.
 조합최적화를 위한 접근법을 아래와 같이 나눠보고 강화학습을 이용할때는 언제인지, 어느 방식으로 사용하는지 조사해보았다.
 
 ### Heuristics
@@ -29,7 +29,7 @@ Tabu Search, Ant Colony Optimization, Particles Swarm Optimization 등이 있다
 
 각각의 특성이 노드가 되고 그 노드 간의 엣지를 구성한 그래프 형태의 데이터로 구성하여 graph neural net을 많이 사용한다.
 
-<img src = "/surabanke/assets/images/graphNeuralNet.png" width = "200">
+<img src = "/surabanke/assets/images/graphNeuralNet.png" width = "500">
 
 딥러닝을 사용하려면 지도학습 방식이므로 데이터셋에 라벨이 있어야 분류가 가능하다.
 GCN f(G,theta)에서 그래프의 각 노드가 optimal solution일 확률 맵을 만든다.
@@ -52,11 +52,9 @@ RL(Subgraph navigation policy)학습에 사용할 Dataset을 만들때
 y는 heuristic solver(original graph에서의 optimal solution이 들어감)라는 식으로 구한다.
 
 
-
-
 2. DRLSA
 
-<img src = "/surabanke/assets/images/DRLSA.png" width = "400">
+<img src = "/surabanke/assets/images/DRLSA.png" width = "800">
 
 SA의 initial solution이 DeepRL의 init state가 된다.
 몇 step은 강화학습으로 진행하여 init solution을 찾은 후 simulated annealing을 진행한다.

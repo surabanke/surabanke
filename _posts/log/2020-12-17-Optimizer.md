@@ -3,18 +3,18 @@ title : "Optimizers"
 
 date : 2020-12-18
 
-categories : DL
+categories : log
 ---
 
 최적화 기법들에대해 노트에 적어놨던거
 
-###SGD (Stochastic Gradient Descent)
+### SGD (Stochastic Gradient Descent)
 
 <img src = "/surabanke/assets/images/SGD.png" width = "180">
 
 L은 Loss 로 gradient는 Loss를 Weight로 편미분한 것이다. 여기서 에타는 learning rate
 
-###Momentum
+### Momentum
 
 기울기가 변하지 않는 방향으로 일정하게 가속하는 물리법칙을 적용 비등방성 함수에서 움직임 최소화, oscillation 상황에서 관성을 이용하여 불필요한 운동하지 않음.
 
@@ -24,13 +24,13 @@ v <- β*v - α(∂L/∂w)
 
 w <- w - v
 
-###Neterov Momentum (a.k.a NAG, Nesterov Accelerated Gradient)
+### Neterov Momentum (a.k.a NAG, Nesterov Accelerated Gradient)
 
 모멘텀 옵티마이저의 변종으로 기본 모멘텀보다 빠르다. 기본 아이디어는 현재 위치가 아니라 모멘텀 방향으로 조금 앞서서 gradient를 계산하는 것이다.
 
 모멘텀에선 w에대해 Loss를 편미분, 네스테로프 모멘텀은 w-βv에대해 Loss를 편미분
 
-###AdaGrad(Adaptive Gradient descent)
+### AdaGrad(Adaptive Gradient descent)
 adaptive learning rate:
 일반 SGD에 learning rate decay를 추가 학습 초반과 후반의 갱신속도 차이를 둠  : global minimum으로 더 빠르게 가며 hyperparameter인 를 덜 tuning해도 된다는 장점이 있다.
 
@@ -41,7 +41,7 @@ w <- w - α*(1/sqrt(h))*(∂L/∂w)
 h에  ε을 더해서 1/sqrt(h+ε)로 사용하기도 한다. h가 0에 가까워서 전체값이 너무 커지는 것을 방지하기 위함이다. (h는 1e-4 ~ 1e-8정도로)
 
 
-###RMS Prop
+### RMS Prop
 
 AdaGrad 의 h는 계속 (∂L/∂w)를 제곱하여 갱신되기에 점점 커지고 나중엔 1/sqrt(h)은 갱신될때 0이 되어 전혀 갱신되지 못함 -> 이 문제를 개선한것이  RMS Prop이다.
 RMSProp은 EMA(Exponential Moving Average, 지수이동평균)로 과거 기울기 반영 규모를 기하급수적으로 감소시킴
@@ -56,7 +56,7 @@ h <-  γh + (1- γ)((∂L/∂w).^2)
 w <- w - α*(1/sqrt(h))*(∂L/∂w)
 
 
-###Adam(Adaptive moment estimation)
+### Adam(Adaptive moment estimation)
 
 Momentum + RMSProp 으로 부드러운 움직임과 매개변수 갱신도조정 특성을 다 포함한 최적화기법
 
