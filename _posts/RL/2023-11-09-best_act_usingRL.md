@@ -1,5 +1,5 @@
 ---
-title : "Goal-Oriented Next Best Activity Recommendation using Reinforcement Learning 논문리0"
+title : "Goal-Oriented Next Best Activity Recommendation using Reinforcement Learning 논문리뷰"
 
 date : 2023-08-09
 
@@ -59,7 +59,7 @@ event e는 trace의 구성요소로  e = {trace_id, activity a, timestamp ts}로
 
 ### 리워드
 
-<img src="/surabanke/assets/images/bestactreward.png" width = "600">
+<img src="/surabanke/assets/images/bestactreward.png" width = "400">
 
 KPI 끼리 상충될 수 있어서 goal 1이 시간이고 goal2가 비용이면 ground truth trace의 action에 따른 비용 분포도(ground truth distribution of process outcome)를 구하여 action이 그 값이랑 다르면 -0.5 맞으면 +0.5를 주는 balancing reward를 도입하였다.
 
@@ -80,7 +80,7 @@ KPI 끼리 상충될 수 있어서 goal 1이 시간이고 goal2가 비용이면 
 논문의 데이터셋 4개에는 각각의 이벤트 데이터를 토대로 각 상황의 관계를 나타내는 그래프로 만들어져 있다.(process mining tool을 사용하였다고 한다.)
 아래 그래프와 같이 각 이벤트의 관계를 나타낸 그래프를 만듬
 
-<img src="/surabanke/assets/images/DFG2.png" width = "600">
+<img src="/surabanke/assets/images/DFG2.png" width = "300">
 
 코드에 그래프 관계가 하드코딩 되어있다.
 

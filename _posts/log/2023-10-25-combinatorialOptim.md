@@ -81,6 +81,7 @@ next state을 받기위해서 temprature에 따라 다시 accept와 reject가 �
 곰의 이미지가 state이고 특징으로 겨울잠, 꿀(?), 포유류, 연어 etc의 특징이 있으나 정말 관련없는 특징(비행기, 안경)으로 조합을 만들고싶지 않고 이런 search space를 줄이고 싶을때
 State마다 사용가능한 arm이 달라지는 것이다.(이는 위의 LeNSE에서 search space를 줄이는 것과 같은 효과를 줄것같다.)
 
+
 - 미탐색된 arm의 집합(q)이 선택가능한 arm의 개수 B보다 크면 랜덤하게 B개를 고름 (exploration)
 - 미탐색된 arm의 집합(q)이 선택가능한 arm의 개수 B보다 작으면 B-q 만큼 고르고 나머지는 탐색된 arm에서 greedy하게 고른다.(exploration+exploitation)
 - 미탐색된 arm이 없으면 그냥 B개 선택(exploitation)
