@@ -42,8 +42,9 @@ Combinatorial Optimization with graph convnet and guided tree search Paper에서
 
 ### Reinforcement learning
 
-1. RL은 search space를 줄이는데만 사용하고 최적화는 휴리스틱을 사용함
+**LeNSE**
 
+RL은 search space를 줄이는데만 사용하고 최적화는 휴리스틱을 사용함
 LeNSE (NeuralNet LargeScale SearchSpace Combinatorial Optimization)에서는 강화학습으로 subgraph 찾는다.(search space 줄임)
 graph pruning이라고 하며 전체 search space에서 찾는것보다 optimal solution을 찾을 확률이 더 크다고한다.
 
@@ -52,7 +53,7 @@ RL(Subgraph navigation policy)학습에 사용할 Dataset을 만들때
 y는 heuristic solver(original graph에서의 optimal solution이 들어감)라는 식으로 구한다.
 
 
-2. DRLSA
+**DRLSA**
 
 <img src = "/surabanke/assets/images/DRLSA.png" width = "800">
 
@@ -64,14 +65,14 @@ DeepRL의 state가 SA의 current best solution이 되는것이다 더 좋은 Sbe
 54개는 DRLSA가 더 좋았다고한다.
 
 
-3. Neural SA(Neural Simulated Annealing)
+**Neural SA(Neural Simulated Annealing)**
 
 위의 DRLSA와 다르게 RL의 optimisable한 요소를 SA와 같이 사용한다.(solution을 share한다.)
 ('we augment SA with RL-optimisable components, instead of simply using them as standalone algorithms that only interact via shared solutions')
 next state을 받기위해서 temprature에 따라 다시 accept와 reject가 결정됨
 
 
-4. contextual combinatorial bandits(CCMAB)
+**contextual combinatorial bandits(CCMAB)**
 
 강화학습은 아니지 action에 따라 변화하는 state가 아닌 환경에서 사용할 수 있다. 어느 조합을 선택해도 다음 state에 아무 영향이 없다.
 또한 사용가능한 Arm의 풀이 지속적으로 변하는 volatile arms상황을 고려한다. (action space가 변화하는 것으로 강화학습에서 action masking으로 구현가능하다.)
