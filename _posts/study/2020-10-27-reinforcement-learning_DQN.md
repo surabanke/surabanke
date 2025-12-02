@@ -3,7 +3,7 @@ title : "Cube_RL_DQN"
 
 date : 2020-10-27
 
-categories : rl
+categories : study
 ---
 
 ## DQN에이전트를 사용하여 큐브가 목표지점 찾아가게하는 간단한 알고리즘

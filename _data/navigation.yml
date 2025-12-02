@@ -1,12 +1,8 @@
 # main links
 main:
-  - title: "RL paper"
-    url: /rl_paper/
-  #- title: "Paper review"
-   # url: https://surabanke.github.io/surabanke/rl_paper/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "log"
+    url: /log/
+  - title: "study"
+    url: /study/
+  - title: "paper_review"
+    url: /paper_review/

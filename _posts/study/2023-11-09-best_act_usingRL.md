@@ -3,7 +3,7 @@ title : "Goal-Oriented Next Best Activity Recommendation using Reinforcement Lea
 
 date : 2023-08-09
 
-categories : rl
+categories : study
 ---
 ## 비즈니스 상황에서 여러가지 조건을 만족하는 최적의 action 고르기
 

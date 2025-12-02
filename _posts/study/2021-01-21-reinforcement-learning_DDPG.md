@@ -3,7 +3,7 @@ title : "DDPG"
 
 date : 2020-01-21
 
-categories : rl
+categories : study
 ---
 
 ## DDPG
